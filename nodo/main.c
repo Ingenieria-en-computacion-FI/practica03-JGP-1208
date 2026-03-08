@@ -1,30 +1,13 @@
-#include <stdio.h>
 #include "nodo.h"
-
-int main()
-{
-    printf("Prueba del TAD Nodo\n");
-
-    /* TODO
-       1 Crear un nodo con valor 10
-    */
-    Nodo* n = NULL;
-
-    /* TODO
-       2 Mostrar el valor del nodo usando obtenerValor
-    */
-
-    /* TODO
-       3 Cambiar el valor a 25 usando asignarValor
-    */
-
-    /* TODO
-       4 Mostrar nuevamente el valor
-    */
-
-    /* TODO
-       5 Liberar el nodo con destruirNodo
-    */
-
-    return 0;
+#include <stdio.h>
+int main(){
+   nodo *n;
+   n = crearnodo(2);
+   printf("El valor del nodo es: %d \n", obtenervalor(n));
+   asignarvalor(n, 45);
+   printf("El valor del nodo es: %d \n", obtenervalor(n));
+   destruirnodo(n);
+   (n == NULL) ? printf("El nodo es nulo \n") : printf("El nodo no es nulo \n");
+  
+   return 0;
 }
