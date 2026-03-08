@@ -1,41 +1,27 @@
-#include <stdio.h>
 #include "fraccion.h"
+#include <stdio.h>
 
-int main()
-{
-
-    printf("Prueba del TAD Fraccion\n");
-
-    /* TODO
-       1 Crear dos fracciones
-       ejemplo: 1/2 y 3/4
-    */
-    Fraccion* f1 = NULL;
-    Fraccion* f2 = NULL;
-
-
+int main() {
+    
+    Fraccion* f1 = crearFraccion(2, 4); 
+    Fraccion* f2 = crearFraccion(3, 6); 
+    
     printf("Fraccion 1: ");
-    /* TODO imprimir */
-
-
+    imprimir(f1);
+    
     printf("Fraccion 2: ");
-    /* TODO imprimir */
-
-
-    printf("\nSuma de fracciones:\n");
-
-    /* TODO
-       2 Sumar fracciones
-    */
-    Fraccion* resultado = NULL;
-
-
-    /* TODO
-       3 Imprimir resultado
-    */
-
-
-    /* TODO
+    imprimir(f2);
+    
+    Fraccion* suma = sumar(f1, f2);
+    printf("Suma: ");
+    imprimir(suma);
+    
+    destruir(f1);
+    destruir(f2);
+    destruir(suma);
+    
+    return 0;
+}
        4 Liberar memoria
     */
 
