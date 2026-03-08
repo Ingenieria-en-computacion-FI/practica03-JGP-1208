@@ -1,42 +1,22 @@
 #include <stdio.h>
 #include "pelicula.h"
 
-int main()
-{
+int main() {
+    printf("--- Iniciando Prueba de TAD Pelicula ---\n\n");
 
-    printf("Prueba del TAD Pelicula\n");
+    Pelicula* peli = crearPelicula("Back To The Future", "Ciencia Ficcion");
+    if (peli == NULL) {
+        printf("Error al asignar memoria.\n");
+        return 1;
+    }
 
-    /* TODO
-       Crear una película
-    */
-    Pelicula* p = NULL;
+    agregarDirector(peli, "Christopher Loyd");
+    cambiarGenero(peli, "Aventura");
 
+    imprimir(peli);
 
-    /* TODO
-       Agregar algunos directores
-    */
-
-
-    /* TODO
-       Imprimir película
-    */
-
-
-    printf("\nCambiar genero\n");
-
-    /* TODO
-       Cambiar genero
-    */
-
-
-    /* TODO
-       Imprimir nuevamente
-    */
-
-
-    /* TODO
-       Liberar memoria
-    */
+    destruir(peli);
+    peli = NULL;
 
     return 0;
 }
